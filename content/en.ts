@@ -41,8 +41,7 @@ export const en: Content = {
     title: "“I learned the language<br><em>to feel the song.”</em>",
     p1: "Helen Huang spent two years studying Mandarin at a university in Beijing. She credits that time with helping her understand and feel the lyrics she sings.",
     p2: "She began her career on stage as an MC at events. Around 2010 she started singing, at first in Indonesian and English, and turned to Mandarin songs when she saw how much audiences wanted them. Since around 2015, Mandarin has been the heart of her repertoire.",
-    quote:
-      "Mandarin ballads ask for soaring head-voice ornaments and precise breath control, a craft she continues to refine.",
+    quote: "Mandarin ballads need high ornaments in head voice and steady breath. Helen continues to improve on both.",
     photoAlt: "Helen Huang in a burgundy velvet gown, looking over her shoulder",
   },
 

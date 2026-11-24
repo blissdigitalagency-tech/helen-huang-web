@@ -41,8 +41,7 @@ export const id: Content = {
     title: "“Saya belajar bahasa<br><em>untuk merasakan lagunya.”</em>",
     p1: "Helen Huang belajar bahasa Mandarin selama dua tahun di sebuah universitas di Beijing. Menurutnya, pengalaman itu membantunya memahami sekaligus menghayati lirik lagu yang ia bawakan.",
     p2: "Ia mengawali karier di panggung sebagai pembawa acara (MC). Sekitar tahun 2010 ia mulai bernyanyi, awalnya lagu berbahasa Indonesia dan Inggris, lalu beralih ke lagu Mandarin setelah melihat besarnya permintaan penonton. Sejak sekitar 2015, lagu Mandarin menjadi inti repertoarnya.",
-    quote:
-      "Lagu balada Mandarin menuntut cengkok tinggi dengan <i>head voice</i> dan pengaturan napas yang presisi, keahlian yang terus ia asah.",
+    quote: "Balada Mandarin butuh cengkok tinggi dengan <i>head voice</i> dan napas yang terjaga. Helen terus memperbaiki keduanya.",
     photoAlt: "Helen Huang in a burgundy velvet gown, looking over her shoulder",
   },
 
