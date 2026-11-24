@@ -1,45 +1,49 @@
 # Helen Huang — Artist Website
 
-Profile site for Helen Huang, Indonesian Mandopop singer. A single landing page, front-end only:
-plain HTML, CSS and JavaScript, with [Vite](https://vite.dev) as the local dev server and build tool.
+Profile site for Helen Huang, Indonesian Mandopop singer. Built with [Next.js](https://nextjs.org) as a
+static export, prototyped on Netlify (no custom domain yet).
 
 ## Run it
 
 ```bash
 npm install
-npm run dev       # http://localhost:5500, reloads on save
-npm run build     # production files in dist/
-npm run preview   # serve the built dist/ locally
+npm run dev       # http://localhost:5500
+npm run build     # static site in out/
+npm start         # serve the built out/ locally
 ```
 
-Requires Node 20.19 or newer.
+Requires Node 20.9 or newer.
+
+## Deploy (Netlify)
+
+`netlify.toml` is already set up: build command `npm run build`, publish folder `out`.
+Connect the repo in Netlify, or run `npm run build` and drag `out/` into Netlify Drop.
 
 ## Where things live
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The page. All **Indonesian** copy lives here (Indonesian is the default language). |
-| `js/i18n.js` | All **English** copy, keyed to the `data-i18n` attributes in `index.html`. |
-| `js/main.js` | Language switch, mobile menu, scroll reveals, header behaviour. |
-| `css/styles.css` | All styling. Colours and fonts are CSS variables at the top of the file. |
-| `assets/images/` | Images. `portrait.jpg` is the hero portrait. |
+| `content/id.ts` | All **Indonesian** copy. Indonesian is the default, served at `/`. |
+| `content/en.ts` | All **English** copy, served at `/en/`. Same keys as `id.ts`. |
+| `content/site.ts` | Streaming / YouTube links and the gallery photo list (order + alt text). |
+| `components/SitePage.tsx` | The page layout, section by section. |
+| `app/globals.css` | All styling. Colours and fonts are CSS variables at the top. |
+| `public/media/` | Hero video and poster, logo, gallery photos (from the dev kit). |
 
-### Editing text
-
-- Change Indonesian text in `index.html`.
-- Change English text in `js/i18n.js`, using the same key as the element's `data-i18n` value.
-- New translatable element: give it `data-i18n="section.key"` in the HTML and add that key to `js/i18n.js`.
+To change text, edit `content/id.ts` and `content/en.ts` only; components don't hold copy.
+Fields marked `html` in `content/types.ts` may use `<em>`, `<i>`, `<strong>` and `<br>`.
 
 ## Content rules
 
-Facts on the site come from published sources (Jawa Pos, innews, Liputan6, RRI, Tren24, Orasi Rakyat,
-Apple Music, Spotify). Don't add claims about Helen that aren't sourced or confirmed by her team.
+The copy is the approved site copy (originally in `index.html` / `js/i18n.js`), not the copy in the
+dev kit's `PROMPT.md`. The dev kit is used for the visual design and assets only.
+Facts come from published sources. Don't add claims about Helen that aren't sourced or confirmed by her team.
 
 ## Still to do
 
-- [ ] Colour palette: Helen asked for gold. The current gold-base version is a draft under review.
-- [ ] Booking contact (email / WhatsApp / manager), marked `TODO` in `index.html`.
-- [ ] Album artwork for 付出 (Fu Chu).
-- [ ] YouTube video embeds.
+- [ ] Booking contact (email / WhatsApp / manager). Contact section says "coming soon".
+- [ ] Album artwork for 付出 (Fu Chu). The cover is a CSS placeholder.
+- [ ] YouTube video embeds (two placeholders in Music).
 - [ ] Chinese characters for "Chuan Ge", once confirmed.
 - [ ] Confirm "Sing Sing So" is described correctly as a Batak folk song.
+- [ ] Social links (Instagram, Facebook, TikTok) and a footer "follow" row, once supplied.
