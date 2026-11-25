@@ -3,6 +3,12 @@
    Design tokens from the dev kit brief (section 4). Dark only.
    ========================================================= */
 
+@import "@fontsource-variable/bodoni-moda/standard.css";
+@import "@fontsource-variable/bodoni-moda/standard-italic.css";
+@import "@fontsource-variable/jost/index.css";
+@import "@fontsource-variable/noto-serif-sc/index.css";
+@import "@fontsource/pinyon-script/400.css";
+
 :root {
   color-scheme: dark;
 
@@ -22,10 +28,10 @@
   --gutter: 40px;
   --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
 
-  --display: var(--f-display), "Didot", serif;
-  --sans: var(--f-body), system-ui, sans-serif;
-  --zh: var(--f-zh), "Songti SC", serif;
-  --script: var(--f-script), cursive;
+  --display: "Bodoni Moda Variable", "Didot", serif;
+  --sans: "Jost Variable", system-ui, sans-serif;
+  --zh: "Noto Serif SC Variable", "Songti SC", serif;
+  --script: "Pinyon Script", cursive;
 }
 
 @media (max-width: 767px) {
