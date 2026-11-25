@@ -18,6 +18,7 @@ Requires Node 20.9 or newer.
 
 `netlify.toml` is already set up: build command `npm run build`, publish folder `out`.
 Connect the repo in Netlify, or run `npm run build` and drag `out/` into Netlify Drop.
+The site bundles its fonts from Fontsource packages, so the build does not fetch Google Fonts.
 
 ## Where things live
 
