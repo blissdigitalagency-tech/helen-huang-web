@@ -1,115 +1,112 @@
 import type { Content } from "./types";
 
 // English (served at /en/).
-// Copy carried over word for word from the approved site (js/i18n.js, 23 Nov 2026).
+
+const GOLD_STAR = "11th Malaysia Gold Star Awards";
 
 export const en: Content = {
   locale: "en",
   meta: {
-    title: "Helen Huang — Mandopop Singer",
+    title: "Helen Huang",
     description:
       "Helen Huang, Indonesian Mandopop singer. MURI record holder for the first Mandarin-language concert by an Indonesian singer on a cruise ship.",
   },
 
   nav: {
-    about: "About",
-    journey: "Journey",
     music: "Music",
-    gallery: "Gallery",
-    stage: "Stage",
+    discography: "Discography",
+    awards: "Awards",
+    performances: "Performances",
     booking: "Booking",
     menu: "Menu",
     close: "Close",
   },
 
-  hero: {
-    eyebrow: "Indonesian Mandopop Singer",
-    lead: "An Indonesian voice for Mandarin song. Over a decade on stage across Indonesia, Malaysia and Singapore.",
-    listen: "Listen",
-    book: "Book a performance",
-    sealRecord: "Record",
+  hero: { listen: "Listen", book: "Book a performance" },
+
+  music: { label: "Music", title: "Listen Now" },
+
+  discography: {
+    label: "Discography",
+    title: "Singles &amp; Albums",
+    releases: [
+      { year: "2026", title: "Yong Gan Xiang Qian Chuang", zh: "勇敢向前闯", note: "Single" },
+      { year: "2024", title: "Tian Huang Di Lao Zhi Shi Ge Chuan Shuo", zh: "天荒地老只是个传说", note: "Single" },
+      { year: "2024", title: "Fu Chu", zh: "付出", note: "Single" },
+      { year: "2020", title: "Hui Shou", zh: "挥手", note: "Single" },
+      { year: "2024", title: "Second album", note: "Album" },
+      { year: "I", title: "Helenism World", note: "Album" },
+    ],
   },
 
-  ribbon: [
-    "First Indonesian singer to hold a Mandarin-language concert on a cruise ship",
-    "MURI Record · April 2025",
-    "Star Voyager",
-  ],
-
-  about: {
-    label: "About",
-    title: "“I learned the language<br><em>to feel the song.”</em>",
-    p1: "Helen Huang spent two years studying Mandarin at a university in Beijing. She credits that time with helping her understand and feel the lyrics she sings.",
-    p2: "She began her career on stage as an MC at events. Around 2010 she started singing, at first in Indonesian and English, and turned to Mandarin songs when she saw how much audiences wanted them. Since around 2015, Mandarin has been the heart of her repertoire.",
-    quote: "Mandarin ballads need high ornaments in head voice and steady breath. Helen continues to improve on both.",
-    photoAlt: "Helen Huang in a burgundy velvet gown, looking over her shoulder",
-  },
-
-  journey: {
-    label: "",
-    title: "The Journey",
-    items: [
-      { year: "c. 2010", title: "First songs", text: "After starting out as an MC, she begins singing, at first in Indonesian and English." },
-      { year: "c. 2015", title: "Turning to Mandarin", text: "Seeing strong demand for Mandarin singers, she makes Mandarin songs her focus." },
-      { year: "2023", title: "Her own label", text: "Recordings begin releasing through her own company, Helen Huang Enterprise." },
-      { year: "2024", title: '<span lang="zh">付出</span> Fu Chu', text: "Album released 5 July 2024 through Varia Music Production." },
+  awards: {
+    label: "Awards",
+    title: "Winning Awards",
+    groups: [
+      {
+        year: "2026",
+        event: GOLD_STAR,
+        items: [
+          { badge: "my", zh: "海外杰出当红歌手大奖", name: "Overseas Outstanding Singer Award" },
+          { badge: "my", zh: "海外杰出歌手大奖", name: "Outstanding Overseas Acclaimed Singer Award" },
+          { badge: "my", zh: "海外杰出华裔艺术家", name: "Outstanding Chinese Artist Overseas" },
+        ],
+      },
       {
         year: "2025",
-        title: "A record at sea",
-        text: "A Mandarin-language concert aboard the <em>Star Voyager</em>. On 25 April 2025, MURI recognises her as the first Indonesian singer to do so.",
-        highlight: true,
+        items: [
+          {
+            badge: "muri",
+            name: "MURI Record",
+            from: "First Indonesian singer to hold a Mandarin concert on a cruise ship.",
+          },
+        ],
+      },
+      {
+        year: "2020",
+        items: [
+          {
+            badge: "my",
+            name: 'Outstanding Vocal Artistry <span lang="zh">歌艺超群</span>',
+            from: 'Welfare association in Selangor, Malaysia <span lang="zh">雪州五條港義益福利會</span>',
+          },
+        ],
+      },
+      {
+        year: "2019",
+        items: [
+          {
+            badge: "my",
+            name: "Outstanding and Dazzling Indonesian Singer",
+            from: 'Malacca Sanchuan Welfare and Fellowship Association, Malaysia <span lang="zh">印尼傑出歌手表彰牌，由馬來西亞馬六甲三川福利聯誼會敬贈</span>',
+          },
+        ],
+      },
+      {
+        year: "2018",
+        items: [{ badge: "id", name: "Plaque of Appreciation", from: "Yayasan Sinar Kasih, Surabaya" }],
       },
     ],
   },
 
-  bridge: {
-    label: "",
-    title: "Two languages,<br><em>one voice.</em>",
-    text: "Helen sings where Indonesian and Mandarin song meet. Her repertoire includes “Chuan Ge”, a Mandarin version of the Batak folk song “Sing Sing So”, and her YouTube covers move freely between Mandarin, Indonesian and English.",
-    from: "Batak folk song",
-    to: "Mandarin version",
-  },
-
-  music: {
-    label: "",
-    title: "Music",
-    listenLabel: "Listen now",
-    listenTitle: "Helen’s songs, on your favourite platform.",
-    albumMeta: "Released 5 July 2024 · Varia Music Production",
-    albumLink: "Listen on Apple Music →",
-    tracks: [
-      { zh: "挥手", title: "Hui Shou", text: "“A Wave of the Hand”. Original single, lyrics by Julius Shen." },
-      { zh: "搀扶", title: "Chan Fu", text: "Single, 2025." },
-      { title: "Chuan Ge", text: "A Mandarin version of “Sing Sing So”, from her stage repertoire." },
-    ],
-    videoMore: "Covers in Mandarin, Indonesian &amp; English <strong>Watch on YouTube →</strong>",
-  },
-
-  gallery: {
-    label: "",
-    title: "Gallery",
-    prev: "Previous photo",
-    next: "Next photo",
-    close: "Close",
-  },
-
-  stage: {
-    label: "",
-    title: "On Stage",
-    lead: "Solo and alongside fellow Indonesian artists, from Medan to Singkawang and across the straits. Lunar New Year is her busiest season.",
-    places: ["Medan", "Singkawang", "Malaysia", "Singapore"],
-    sharedLabel: "Has shared the stage with",
-    honoursLabel: "Honours",
-    honours: [
-      "<strong>2025 · MURI Record</strong> First Indonesian singer to hold a Mandarin-language concert on a cruise ship.",
-      "Two awards from welfare associations in Malacca and Selangor, Malaysia.",
-      "Plaque of appreciation from Yayasan Sinar Kasih, Surabaya.",
+  performances: {
+    label: "Performances",
+    title: "Selected Performances",
+    items: [
+      { when: "April 2025", what: "Mandarin concert on the Star Voyager cruise ship", where: "MURI Record" },
+      { when: "Lunar New Year", what: "[Event name]", where: "Medan" },
+      { when: "Lunar New Year", what: "[Event name]", where: "Singkawang" },
+      { when: "[Year]", what: "[Event name]", where: "Malaysia" },
+      { when: "[Year]", what: "[Event name]", where: "Singapore" },
     ],
   },
 
   contact: {
     eyebrow: "Private events · Lounges &amp; clubs · Lunar New Year",
-    title: "Book Helen <em>for your event</em>",
-    note: "Booking details coming soon.",
+    title: "Book Helen for Your Event",
+    button: "WhatsApp",
+    message: "Hi, I would like to book Helen Huang. Date: , City: , Event type: ",
+    numberPlaceholder: "[WhatsApp number]",
+    inactive: "Not active yet",
   },
 };

@@ -10,6 +10,26 @@ export function Star({ className, size = 12 }: { className?: string; size?: numb
   );
 }
 
+// Chat bubble with a handset, drawn to read as WhatsApp at small sizes.
+export function WhatsAppIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        d="M12 2.8a9.2 9.2 0 0 0-7.9 13.9L3 21l4.4-1.1A9.2 9.2 0 1 0 12 2.8Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.2 7.6c-.3 0-.7.1-.9.4-.4.5-.8 1.1-.8 2 0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.6.1-.4.1-.8 0-1-.1-.2-.4-.3-.8-.5l-2-1c-.3-.1-.5-.2-.7.1l-.9 1.2c-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.9-1.7-2.2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6Z"
+        fill="currentColor"
+        transform="translate(-1.6 -1.2) scale(0.9)"
+      />
+    </svg>
+  );
+}
+
 // Thin jewellery glint: four-ray cross, fainter diagonal cross, cream centre.
 export function GlintPaths({ fill }: { fill: string }) {
   return (

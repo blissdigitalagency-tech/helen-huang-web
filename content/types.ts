@@ -1,89 +1,77 @@
 // Shape shared by every locale file. Fields marked "html" may contain
-// <em>, <i>, <strong> or <br>; everything else is plain text.
+// <em>, <i>, <strong>, <br> or <span lang="zh">; everything else is plain text.
 
 export type Locale = "id" | "en";
+
+export interface Release {
+  /** Year, or a roman numeral when the year is unknown. */
+  year: string;
+  title: string;
+  zh?: string;
+  /** Small uppercase line under the title. */
+  note: string;
+}
+
+/** Icon shown beside an award: a country flag or the MURI logo. */
+export type AwardBadge = "my" | "id" | "muri";
+
+export interface Award {
+  badge: AwardBadge;
+  zh?: string;
+  /** html */
+  name: string;
+  /** html */
+  from?: string;
+}
+
+export interface Performance {
+  when: string;
+  what: string;
+  where: string;
+}
 
 export interface Content {
   locale: Locale;
   meta: { title: string; description: string };
 
   nav: {
-    about: string;
-    journey: string;
     music: string;
-    gallery: string;
-    stage: string;
+    discography: string;
+    awards: string;
+    performances: string;
     booking: string;
     menu: string;
     close: string;
   };
 
-  hero: {
-    eyebrow: string;
-    lead: string;
-    listen: string;
-    book: string;
-    sealRecord: string;
-  };
-
-  ribbon: string[];
-
-  about: {
-    label: string;
-    /** html */
-    title: string;
-    p1: string;
-    p2: string;
-    /** html */
-    quote: string;
-    photoAlt: string;
-  };
-
-  journey: {
-    label: string;
-    title: string;
-    items: { year: string; /** html */ title: string; /** html */ text: string; highlight?: boolean }[];
-  };
-
-  bridge: {
-    label: string;
-    /** html */
-    title: string;
-    /** html */
-    text: string;
-    from: string;
-    to: string;
-  };
+  hero: { listen: string; book: string };
 
   music: {
+    /** Small gold label above the heading */
     label: string;
     title: string;
-    listenLabel: string;
-    listenTitle: string;
-    albumMeta: string;
-    albumLink: string;
-    tracks: { zh?: string; title: string; text: string }[];
-    /** html */
-    videoMore: string;
   };
 
-  gallery: {
+  discography: {
     label: string;
+    /** html */
     title: string;
-    prev: string;
-    next: string;
-    close: string;
+    releases: Release[];
   };
 
-  stage: {
+  awards: {
     label: string;
-    title: string;
-    lead: string;
-    places: string[];
-    sharedLabel: string;
-    honoursLabel: string;
     /** html */
-    honours: string[];
+    title: string;
+    /** Newest first. */
+    groups: { year: string; event?: string; items: Award[] }[];
+  };
+
+  performances: {
+    label: string;
+    /** html */
+    title: string;
+    items: Performance[];
   };
 
   contact: {
@@ -91,6 +79,11 @@ export interface Content {
     eyebrow: string;
     /** html */
     title: string;
-    note: string;
+    button: string;
+    /** Pre-filled WhatsApp message */
+    message: string;
+    numberPlaceholder: string;
+    /** Tag on the button while the number is a placeholder */
+    inactive: string;
   };
 }

@@ -25,10 +25,10 @@ Connect the repo in Netlify, or run `npm run build` and drag `out/` into Netlify
 | --- | --- |
 | `content/id.ts` | All **Indonesian** copy. Indonesian is the default, served at `/`. |
 | `content/en.ts` | All **English** copy, served at `/en/`. Same keys as `id.ts`. |
-| `content/site.ts` | Streaming / YouTube links and the gallery photo list (order + alt text). |
+| `content/site.ts` | Streaming / YouTube links and which photos appear in each section (with alt text). |
 | `components/SitePage.tsx` | The page layout, section by section. |
 | `app/globals.css` | All styling. Colours and fonts are CSS variables at the top. |
-| `public/media/` | Hero video and poster, logo, gallery photos (from the dev kit). |
+| `public/media/` | Hero video and poster, logo, photos (from the dev kit), MURI logo. |
 
 To change text, edit `content/id.ts` and `content/en.ts` only; components don't hold copy.
 Fields marked `html` in `content/types.ts` may use `<em>`, `<i>`, `<strong>` and `<br>`.
@@ -41,9 +41,8 @@ Facts come from published sources. Don't add claims about Helen that aren't sour
 
 ## Still to do
 
-- [ ] Booking contact (email / WhatsApp / manager). Contact section says "coming soon".
-- [ ] Album artwork for 付出 (Fu Chu). The cover is a CSS placeholder.
-- [ ] YouTube video embeds (two placeholders in Music).
-- [ ] Chinese characters for "Chuan Ge", once confirmed.
-- [ ] Confirm "Sing Sing So" is described correctly as a Batak folk song.
-- [ ] Social links (Instagram, Facebook, TikTok) and a footer "follow" row, once supplied.
+- [ ] Official MURI logo. `public/media/muri.png` is a stand-in stock image with watermarks; replace before launch.
+- [ ] Performance list. Only the Star Voyager row is real; the bracketed rows are placeholders.
+- [ ] Booking contact (email / WhatsApp / manager). Booking section says "coming soon".
+- [ ] Title of the second album (2024), if it has one.
+- [ ] Social links (Instagram, Facebook, TikTok), once supplied.

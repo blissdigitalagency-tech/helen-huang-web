@@ -2,16 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Content, Locale } from "@/content/types";
+import { SHOW_PERFORMANCES } from "./SitePage";
 
 const LOGO = "/media/logo/helen-huang-logo-cropped.webp";
 
 function navLinks(nav: Content["nav"]) {
   return [
-    { href: "#about", label: nav.about },
-    { href: "#journey", label: nav.journey },
     { href: "#music", label: nav.music },
-    { href: "#gallery", label: nav.gallery },
-    { href: "#stage", label: nav.stage },
+    { href: "#discography", label: nav.discography },
+    { href: "#awards", label: nav.awards },
+    ...(SHOW_PERFORMANCES ? [{ href: "#performances", label: nav.performances }] : []),
   ];
 }
 
@@ -76,7 +76,7 @@ export function Header({ c }: { c: Content }) {
   const tools = (
     <div className="top-tools">
       <LangSwitch locale={c.locale} />
-      <a className="btn btn-foil btn-sm" href="#contact">
+      <a className="btn btn-lux btn-sm" href="#booking">
         {c.nav.booking}
       </a>
       <button type="button" className="menu-btn" aria-expanded={open} aria-controls="menu" onClick={openMenu}>
@@ -120,7 +120,7 @@ export function Header({ c }: { c: Content }) {
               {l.label}
             </a>
           ))}
-          <a className="btn btn-foil" href="#contact" onClick={() => setOpen(false)}>
+          <a className="btn btn-lux" href="#booking" onClick={() => setOpen(false)}>
             {c.nav.booking}
           </a>
         </nav>
