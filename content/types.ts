@@ -10,6 +10,8 @@ export interface Release {
   zh?: string;
   /** Small uppercase line under the title. */
   note: string;
+  /** Shown before the note without uppercasing, e.g. "2nd" in "2nd ALBUM". */
+  ordinal?: string;
 }
 
 /** Icon shown beside an award: a country flag or the MURI logo. */

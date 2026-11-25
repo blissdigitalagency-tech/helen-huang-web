@@ -129,7 +129,10 @@ export function SitePage({ c }: { c: Content }) {
                           {r.zh}
                         </div>
                       )}
-                      <div className="r-note">{r.note}</div>
+                      <div className="r-note">
+                        {r.ordinal && <span className="r-ord">{r.ordinal}</span>}
+                        {r.note}
+                      </div>
                     </div>
                   </li>
                 ))}

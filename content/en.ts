@@ -34,8 +34,8 @@ export const en: Content = {
       { year: "2024", title: "Tian Huang Di Lao Zhi Shi Ge Chuan Shuo", zh: "天荒地老只是个传说", note: "Single" },
       { year: "2024", title: "Fu Chu", zh: "付出", note: "Single" },
       { year: "2020", title: "Hui Shou", zh: "挥手", note: "Single" },
-      { year: "2024", title: "Second album", note: "Album" },
-      { year: "I", title: "Helenism World", note: "Album" },
+      { year: "2024", title: "It’s Me Helen Huang", ordinal: "2nd", note: "Album" },
+      { year: "2019", title: "Helenism World", ordinal: "1st", note: "Album" },
     ],
   },
 
