@@ -103,7 +103,7 @@ export const id: Content = {
   },
 
   contact: {
-    eyebrow: "Acara privat · Lounge &amp; klub · Imlek",
+    eyebrow: "Wedding · Gathering · Anniversary · Private Party · Pub &amp; Club",
     title: "Undang Helen ke Acara Anda",
     button: "WhatsApp",
     message: "Halo, saya ingin booking Helen Huang. Tanggal: , Kota: , Jenis acara: ",

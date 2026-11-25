@@ -102,7 +102,7 @@ export const en: Content = {
   },
 
   contact: {
-    eyebrow: "Private events · Lounges &amp; clubs · Lunar New Year",
+    eyebrow: "Wedding · Gathering · Anniversary · Private Party · Pub &amp; Club",
     title: "Book Helen for Your Event",
     button: "WhatsApp",
     message: "Hi, I would like to book Helen Huang. Date: , City: , Event type: ",
