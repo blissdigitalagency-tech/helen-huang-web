@@ -106,7 +106,7 @@ export const id: Content = {
     eyebrow: "Wedding · Gathering · Anniversary · Private Party · Pub &amp; Club",
     title: "Undang Helen ke Acara Anda",
     button: "WhatsApp",
-    message: "Halo, saya ingin booking Helen Huang. Tanggal: , Kota: , Jenis acara: ",
+    message: "Halo, saya mau undang Helen Huang ke acara saya. Boleh tahu info lebih lanjut?",
     social: "Helen Huang di {network}",
     inactive: "Segera aktif",
   },

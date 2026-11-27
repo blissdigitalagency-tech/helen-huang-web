@@ -105,7 +105,7 @@ export const en: Content = {
     eyebrow: "Wedding · Gathering · Anniversary · Private Party · Pub &amp; Club",
     title: "Book Helen for Your Event",
     button: "WhatsApp",
-    message: "Hi, I would like to book Helen Huang. Date: , City: , Event type: ",
+    message: "Hello, I want to book Helen Huang for my event. Can I get more information?",
     social: "Helen Huang on {network}",
     inactive: "Not active yet",
   },
