@@ -44,6 +44,5 @@ Facts come from published sources. Don't add claims about Helen that aren't sour
 
 - [ ] Official MURI logo. `public/media/muri.png` is a stand-in stock image with watermarks; replace before launch.
 - [ ] Performance list. Only the Star Voyager row is real; the bracketed rows are placeholders.
-- [ ] Booking contact (email / WhatsApp / manager). Booking section says "coming soon".
 - [ ] Title of the second album (2024), if it has one.
-- [ ] Social links (Instagram, Facebook, TikTok), once supplied.
+- [ ] Instagram link, if Helen wants it added to the Booking social buttons (`SOCIALS` in `content/site.ts`).

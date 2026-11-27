@@ -84,7 +84,8 @@ export interface Content {
     button: string;
     /** Pre-filled WhatsApp message */
     message: string;
-    numberPlaceholder: string;
+    /** Accessible name for each social button; "{network}" is replaced, e.g. "Helen Huang on YouTube" */
+    social: string;
     /** Tag on the button while the number is a placeholder */
     inactive: string;
   };

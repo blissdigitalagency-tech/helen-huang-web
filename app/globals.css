@@ -399,7 +399,17 @@ em { font-family: var(--display); }
 .booking-btn.is-inactive:hover { transform: none; color: #ead29a; }
 .booking-btn.is-inactive:hover::after { transform: translateX(-120%); }
 .booking-btn small { font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
-.booking-number { margin: 6px 0 0; font-family: var(--display); font-size: 22px; letter-spacing: 0.02em; user-select: all; font-variant-numeric: tabular-nums; }
+/* Round glass social buttons under the WhatsApp button */
+.booking-socials { display: flex; justify-content: center; gap: 14px; margin: 8px 0 0; padding: 0; list-style: none; }
+.social-btn {
+  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+  color: var(--gold-soft);
+  background: rgba(255, 244, 214, 0.06);
+  border: 1px solid rgba(227, 196, 127, 0.32);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  transition: color 0.35s, border-color 0.35s, background-color 0.35s, transform 0.35s var(--ease);
+}
+.social-btn:hover { color: #fff1c9; border-color: rgba(227, 196, 127, 0.7); background: rgba(255, 244, 214, 0.1); transform: translateY(-2px); }
 
 /* ===== Footer ===== */
 .footer {

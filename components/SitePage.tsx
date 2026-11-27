@@ -1,7 +1,7 @@
 import type { Content } from "@/content/types";
-import { LINKS, PHOTOS, photoSrc, whatsappDisplay, whatsappLink, type Photo } from "@/content/site";
+import { LINKS, PHOTOS, photoSrc, SOCIALS, whatsappLink, type Photo } from "@/content/site";
 import { AwardBadge } from "./AwardBadge";
-import { WhatsAppIcon } from "./icons";
+import { SocialIcon, WhatsAppIcon } from "./icons";
 import { Glints } from "./Glints";
 import { Header } from "./Header";
 import { HeroVideo } from "./HeroVideo";
@@ -26,10 +26,9 @@ function Img({ photo, decorative }: { photo: Photo; decorative?: boolean }) {
   );
 }
 
-/** WhatsApp button and number. Inactive (no wa.me link) while the number is a placeholder. */
+/** WhatsApp button and social links. The button is inactive (no wa.me link) if the number is empty. */
 function BookingCta({ c }: { c: Content["contact"] }) {
   const href = whatsappLink(c.message);
-  const number = whatsappDisplay();
   return (
     <div className="booking-cta">
       {href ? (
@@ -44,7 +43,18 @@ function BookingCta({ c }: { c: Content["contact"] }) {
           <small>{c.inactive}</small>
         </span>
       )}
-      <p className="booking-number">{number ?? c.numberPlaceholder}</p>
+      <ul className="booking-socials">
+        {SOCIALS.map((s) => {
+          const label = c.social.replace("{network}", s.network);
+          return (
+            <li key={s.network}>
+              <a className="social-btn" href={s.href} target="_blank" rel="noopener" aria-label={label} title={label}>
+                <SocialIcon network={s.network} />
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

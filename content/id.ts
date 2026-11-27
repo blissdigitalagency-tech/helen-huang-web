@@ -107,7 +107,7 @@ export const id: Content = {
     title: "Undang Helen ke Acara Anda",
     button: "WhatsApp",
     message: "Halo, saya ingin booking Helen Huang. Tanggal: , Kota: , Jenis acara: ",
-    numberPlaceholder: "[Nomor WhatsApp]",
+    social: "Helen Huang di {network}",
     inactive: "Segera aktif",
   },
 };

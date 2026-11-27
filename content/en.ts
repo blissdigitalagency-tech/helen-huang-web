@@ -106,7 +106,7 @@ export const en: Content = {
     title: "Book Helen for Your Event",
     button: "WhatsApp",
     message: "Hi, I would like to book Helen Huang. Date: , City: , Event type: ",
-    numberPlaceholder: "[WhatsApp number]",
+    social: "Helen Huang on {network}",
     inactive: "Not active yet",
   },
 };
