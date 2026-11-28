@@ -67,7 +67,8 @@ export const id: Content = {
         items: [
           {
             badge: "my",
-            name: 'Outstanding Vocal Artistry <span lang="zh">歌艺超群</span>',
+            zh: "歌艺超群",
+            name: "Outstanding Vocal Artistry",
             from: 'Perkumpulan sosial di Selangor, Malaysia <span lang="zh">雪州五條港義益福利會</span>',
           },
         ],
